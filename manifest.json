@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Hide YouTube News",
+    "version": "1.1",
+    "description": "Toggle to hide or show YouTube News section.",
+    "permissions": ["storage", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
